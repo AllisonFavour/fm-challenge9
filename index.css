@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200..800&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto";
+  height: 100vh;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(234, 29%, 20%, 0.7);
+}
+.show .menu {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: hsl(0, 0%, 100%);
+  padding-inline: 2.5rem;
+  padding-block: 2rem;
+  border-radius: 12px;
+}
+.show .menu img {
+  width: 50px;
+  height: 50px;
+}
+.show .menu h1 {
+  color: hsl(234, 29%, 20%);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.show .menu p {
+  color: hsl(235, 18%, 26%);
+  font-size: 0.84rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.show .menu p span {
+  font-weight: 700;
+}
+.show .menu button {
+  background-color: hsl(235, 18%, 26%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.show .menu button:active {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 0 4px 10px hsla(4, 100%, 67%, 0.8);
+}
+
+.main {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  min-width: 340px;
+  max-width: 1440px;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+}
+.container .main-img {
+  border: none;
+}
+.container .main-img .mobile-img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  color: hsl(235, 18%, 26%);
+  padding: 1.2rem;
+}
+.content h1 {
+  color: hsl(234, 29%, 20%);
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-block-end: 1.2rem;
+}
+.content p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-block-end: 1.5rem;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+}
+.form-div .icon-list {
+  margin-block-end: 1.5rem;
+}
+.form-div .icon-list .list {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-block-end: 0.8rem;
+}
+.form-div .icon-list .list span {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.form-div .form {
+  display: flex;
+  flex-direction: column;
+}
+.form-div .form label {
+  color: hsl(234, 29%, 20%);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-block-end: 0.6rem;
+}
+.form-div .form input {
+  color: hsl(234, 29%, 20%);
+  width: 100%;
+  font-size: 1.2rem;
+  padding-block: 1rem;
+  padding-inline: 0.8rem;
+  margin-block-end: 1.2rem;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 6px;
+}
+.form-div .form input::-moz-placeholder {
+  color: hsl(231, 7%, 60%);
+  font-size: 1.1rem;
+}
+.form-div .form input::placeholder {
+  color: hsl(231, 7%, 60%);
+  font-size: 1.1rem;
+}
+.form-div .form button {
+  background-color: hsl(235, 18%, 26%);
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.form-div .form button:active {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 0 4px 10px hsla(4, 100%, 67%, 0.8);
+}
+
+@media (min-width: 768px) {
+  .main {
+    border: 1px solid red;
+    width: 768px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .container {
+    width: 100%;
+    margin: o auto;
+    background-color: hsl(0, 0%, 100%);
+    border: 5px solid green;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  .container .main-img {
+    order: 2;
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .container .main-img .mobile-img {
+    display: none;
+  }
+  .container .content {
+    order: 1;
+    flex: 1;
+  }
+}
+footer {
+  color: hsl(234, 29%, 20%);
+  text-align: center;
+  padding-block: 1rem;
+}/*# sourceMappingURL=index.css.map */

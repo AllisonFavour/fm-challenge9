@@ -1,0 +1,289 @@
+// IMPORT FONT FROM GOOGLE FONT
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200..800&display=swap");
+
+// CSS RESET
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+// using default css variables or scss vriables which is more efficient and precise
+// VARIABLES FOR COLORS
+$primary-tomato-color: hsl(4, 100%, 67%);
+$neutral-dark-slate-grey: hsl(234, 29%, 20%);
+$neutral-charcoal-grey: hsl(235, 18%, 26%);
+$neutral-grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+
+
+// BODY
+body {
+    font-family: 'Roboto';
+    height: 100vh;
+}
+
+.show {
+    display: flex;  // Or 'block' depending on your layout
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(234, 29%, 20%, 0.7); // Adds a dark overlay effect
+
+
+    .menu {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        // align-items: center;
+        // justify-content: center;
+        background-color: $white;
+        padding-inline: 2.5rem;
+        padding-block: 2rem;
+        border-radius: 12px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h1 {
+            color: $neutral-dark-slate-grey;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        p {
+            color: $neutral-charcoal-grey;
+            font-size: 0.84rem;
+            font-weight: 400;
+            line-height: 1.4;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        button {
+            background-color: $neutral-charcoal-grey;
+            color: $white;
+            font-size: 0.8rem;
+            font-weight: 400;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:active {
+            background-color: $primary-tomato-color;
+            box-shadow: 0 4px 10px hsla(4, 100%, 67%, 0.8);
+        }
+    }
+}
+
+
+// .main
+.main {
+    background-color: $white;
+    width: 100%;
+    min-width: 340px;
+    max-width: 1440px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 1.4rem;
+}
+
+// .container
+.container {
+    background-color: $white;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    // align-items: stretch;
+    // justify-content: center;
+
+    .main-img {
+        // width: 100%;
+        // height: auto;
+        border: none;
+
+        .mobile-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// .main-img
+// @media (max-width: 767px) {
+//     .main-img {
+//         background-image: url('assets/images/illustration-sign-up-mobile.svg');
+//         background-position: center;
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//     }
+// }
+// .main-img {
+//     width: 100%;
+//     height: auto;
+//     // background-image: url('assets/images/illustration-sign-up-mobile.svg');
+// }
+
+// .content
+.content {
+    // border: 1px solid black;
+    color: $neutral-charcoal-grey;
+    padding: 1.2rem;
+
+    
+    h1 {
+        color: $neutral-dark-slate-grey;
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-block-end: 1.2rem;
+    }
+
+    p {
+        font-size: 1.15rem;
+        font-weight: 400;
+        margin-block-end: 1.5rem;
+    }
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+
+    .icon-list {
+        // border: 1px solid green;
+        margin-block-end: 1.5rem;
+
+        .list {
+            // border: 1px solid blue;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-block-end: 0.8rem;
+
+            span {
+                font-size: 1.1rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        // padding-inline: 0.2rem;
+
+
+        label {
+            color: $neutral-dark-slate-grey;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-block-end: 0.6rem;
+        }
+
+        input {
+            color: $neutral-dark-slate-grey;
+            width: 100%;
+            font-size: 1.2rem;
+            padding-block: 1rem;
+            padding-inline: 0.8rem;
+            margin-block-end: 1.2rem;
+            border: 1px solid $neutral-grey;
+            border-radius: 6px;
+        }
+        input::placeholder {
+            color: $neutral-grey;
+            font-size: 1.1rem;
+        }
+
+        button {
+            background-color: $neutral-charcoal-grey;
+            color: $white;
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:active {
+            background-color: $primary-tomato-color;
+            box-shadow: 0 4px 10px hsla(4, 100%, 67%, 0.8);
+        }
+    }
+}
+
+
+// MEDIA QUERY FOR SCREENS LARGER THAN 768PX
+@media (min-width: 768px) {
+
+    .main {
+        border: 1px solid red;
+        width: 768px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    // .container
+    .container {
+        width: 100%;
+        margin: o auto;
+        background-color: $white;
+        border: 5px solid green;
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        // justify-content: stretch;
+        // align-items: center;
+        padding: 1rem;
+        border-radius: 12px;
+
+
+        .main-img {
+            order: 2;
+            background-image: url(assets/images/illustration-sign-up-desktop.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 40%;
+            height: auto;
+
+            border-radius: 10px;
+
+            .mobile-img {
+                display: none;
+            }
+        }
+
+        .content {
+            order: 1;
+            flex: 1;
+        }
+    }
+}
+
+// FOOTER
+footer {
+    color: $neutral-dark-slate-grey;
+    text-align: center;
+    padding-block: 1rem;
+}
