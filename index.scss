@@ -30,8 +30,8 @@ body {
     height: 100vh;
 }
 
-.show {
-    display: flex;  // Or 'block' depending on your layout
+.pop-up {
+    display: none;  // Or 'block' depending on your layout
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -44,20 +44,25 @@ body {
 
 
     .menu {
-        width: 400px;
+        background-color: $white;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        gap: 1.2rem;
+        padding: 2rem;
+        // gap: 1.2rem;
         // align-items: center;
         // justify-content: center;
-        background-color: $white;
-        padding-inline: 2.5rem;
-        padding-block: 2rem;
-        border-radius: 12px;
+        // padding-inline: 2.5rem;
+        // padding-block: 2rem;
+        // border-radius: 12px;
+
 
         img {
             width: 50px;
             height: 50px;
+            margin-block-start: 4rem;
+            margin-block-end: 2rem;
         }
 
         h1 {
@@ -65,6 +70,7 @@ body {
             font-size: 2.5rem;
             font-weight: 700;
             line-height: 1;
+            margin-block-end: 2rem;
         }
 
         p {
@@ -72,6 +78,7 @@ body {
             font-size: 0.84rem;
             font-weight: 400;
             line-height: 1.4;
+            margin-block-end: 14rem;
 
             span {
                 font-weight: 700;
@@ -93,6 +100,10 @@ body {
             box-shadow: 0 4px 10px hsla(4, 100%, 67%, 0.8);
         }
     }
+}
+
+.show {
+    display: flex;
 }
 
 
@@ -192,13 +203,25 @@ body {
         flex-direction: column;
         // padding-inline: 0.2rem;
 
+        .div {
+            display: flex;
+            justify-content: space-between;
 
-        label {
-            color: $neutral-dark-slate-grey;
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-block-end: 0.6rem;
+
+            label {
+                color: $neutral-dark-slate-grey;
+                font-size: 0.9rem;
+                font-weight: 700;
+                margin-block-end: 0.6rem;
+            }
+
+            .error-message {
+                // display: none;
+                color: $primary-tomato-color;
+            }
         }
+
+
 
         input {
             color: $neutral-dark-slate-grey;
@@ -278,6 +301,82 @@ body {
             order: 1;
             flex: 1;
         }
+    }
+
+
+    .pop-up {
+        display: none;  // Or 'block' depending on your layout
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        // width: 100vw;
+        height: 100vh;
+        background-color: hsla(234, 29%, 20%, 0.7); // Adds a dark overlay effect
+    
+    
+        .menu {
+            width: 400px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            // align-items: center;
+            // justify-content: center;
+            background-color: $white;
+            padding-inline: 2.5rem;
+            padding-block: 2rem;
+            border-radius: 12px;
+
+    
+            img {
+                width: 50px;
+                height: 50px;
+                margin: 0;
+            }
+    
+            h1 {
+                color: $neutral-dark-slate-grey;
+                font-size: 2.5rem;
+                font-weight: 700;
+                line-height: 1;
+                margin: 0;
+            }
+    
+            p {
+                color: $neutral-charcoal-grey;
+                font-size: 0.84rem;
+                font-weight: 400;
+                line-height: 1.4;
+                margin: 0;
+    
+                span {
+                    font-weight: 700;
+                }
+            }
+    
+            button {
+                background-color: $neutral-charcoal-grey;
+                color: $white;
+                font-size: 0.8rem;
+                font-weight: 400;
+                padding: 0.8rem;
+                margin: 0;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            button:active {
+                background-color: $primary-tomato-color;
+                box-shadow: 0 4px 10px hsla(4, 100%, 67%, 0.8);
+            }
+        }
+    }
+
+    .show {
+        display: flex;
     }
 }
 

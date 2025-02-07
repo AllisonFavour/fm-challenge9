@@ -9,23 +9,23 @@
     <script defer src="main.js"></script>
 </head>
 <body>
-    <div class="pop-up show"  id="js-pop-up">
+    <div class="pop-up"  id="js-pop-up">
         <div class="menu">
-            <img src="assets/images/icon-success.svg" alt="Sucess Icon">
-            <h1>
-                Thanks for subscribing!
-            </h1>
+                <img src="assets/images/icon-success.svg" alt="Sucess Icon">
+                <h1>
+                    Thanks for subscribing!
+                </h1>
+        
+                <p>
+                    A confirmation email has been sent to <span class="user-email" id="js-user-email">ash@loremcompany.com</span>. 
+                    Please open it and click the button inside to confirm your subscription.
+                </p>
     
-            <p>
-                A confirmation email has been sent to <span class="user-email" id="js-user-email">ash@loremcompany.com</span>. 
-                Please open it and click the button inside to confirm your subscription.
-            </p>
-    
-            <button>Dismiss message</button>
+            <button id="js-dismiss-popup">Dismiss message</button>
         </div>
     </div>
 
-    <main style="display: none;">
+    <main>
         <div class="main">
             <section class="container">
                 <!-- 
@@ -62,7 +62,10 @@
                         </div>
 
                         <form class="form" id="js-form">
-                            <label for="email">Email address</label>
+                            <div class="div">
+                                <label for="email">Email address</label>
+                                <span class="error-message" id="js-error-message"></span>
+                            </div>
                             <input type="email" name="email" id="email" placeholder="email@company.com">
                             <button type="submit">Subscribe to monthly newsletter</button>
                         </form>
@@ -72,7 +75,7 @@
         </div>
     </main>
 
-    <footer style="display: none;">
+    <footer>
         <p>built with love by <b>trillCodes</b> &copy; <b><span id="js-footer-year"></span></b></p>
     </footer>
 </body>
