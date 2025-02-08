@@ -183,7 +183,6 @@ body {
 
 @media (min-width: 768px) {
   .main {
-    border: 1px solid red;
     width: 768px;
     margin: 0 auto;
     padding: 2rem;
@@ -192,12 +191,12 @@ body {
     width: 100%;
     margin: o auto;
     background-color: hsl(0, 0%, 100%);
-    border: 5px solid green;
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
     padding: 1rem;
     border-radius: 12px;
+    box-shadow: 0 4px 10px hsla(234, 29%, 20%, 0.4);
   }
   .container .main-img {
     order: 2;

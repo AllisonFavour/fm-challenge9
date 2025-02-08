@@ -260,7 +260,7 @@ body {
 @media (min-width: 768px) {
 
     .main {
-        border: 1px solid red;
+        // border: 1px solid red;
         width: 768px;
         margin: 0 auto;
         padding: 2rem;
@@ -271,7 +271,7 @@ body {
         width: 100%;
         margin: o auto;
         background-color: $white;
-        border: 5px solid green;
+        // border: 5px solid green;
         display: flex;
         flex-direction: row;
         gap: 1.5rem;
@@ -279,6 +279,7 @@ body {
         // align-items: center;
         padding: 1rem;
         border-radius: 12px;
+        box-shadow: 0 4px 10px hsla(234, 29%, 20%, 0.4);
 
 
         .main-img {
