@@ -157,6 +157,7 @@ body {
   margin-block-end: 1.2rem;
   border: 1px solid hsl(231, 7%, 60%);
   border-radius: 6px;
+  outline: none;
 }
 .form-div .form input::-moz-placeholder {
   color: hsl(231, 7%, 60%);
@@ -214,6 +215,12 @@ body {
   .container .content {
     order: 1;
     flex: 1;
+  }
+  .container .content p {
+    font-size: 1rem;
+  }
+  .container .content .list > span {
+    font-size: 0.9rem;
   }
   .pop-up {
     display: none;
